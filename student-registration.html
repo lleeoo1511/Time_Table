@@ -1,9 +1,72 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Registration</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 32px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #111827;
+    }
+    h1 {
+      margin: 0 0 18px;
+      font-size: 24px;
+      letter-spacing: -0.2px;
+    }
+    form {
+      width: 360px;
+      max-width: 90%;
+      padding: 20px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    }
+    p {
+      margin: 0 0 14px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input,
+    select {
+      width: 100%;
+      padding: 8px 10px;
+      margin-top: 6px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+      width: auto;
+      margin-right: 6px;
+      margin-bottom: 9px;
+      vertical-align: middle;
+    }
+    button {
+      padding: 9px 14px;
+      border-radius: 6px;
+      border: 1px solid #1d4ed8;
+      background: #2563eb;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      margin-right: 8px;
+    }
+    button[type="reset"] {
+      border-color: #cbd5e1;
+      background: #e5e7eb;
+      color: #111827;
+    }
+  </style>
 </head>
 <body>
   <h1>Student Registration</h1>
@@ -25,14 +88,13 @@
     </p>
 
     <p>
-      <label for="program">Program:</label><br>
-      <select id="program" name="program" required>
+      <label for="caste">Caste:</label><br>
+      <select id="caste" name="Caste" required>
         <option value="">Select one</option>
-        <option>Computer Science</option>
-        <option>Business Administration</option>
-        <option>Engineering</option>
-        <option>Psychology</option>
-        <option>Design</option>
+        <option>OBC</option>
+        <option>GENERAL</option>
+        <option>SC/ST</option>
+        <option>Others</option>
       </select>
     </p>
 
@@ -46,16 +108,15 @@
       <input id="confirm-password" name="confirm-password" type="password" minlength="8" required>
     </p>
 
-    <p><strong>Enrollment Options (choose any)</strong></p>
-    <p><label><input type="checkbox" name="clubs" value="robotics"> Robotics & Innovation Club</label></p>
-    <p><label><input type="checkbox" name="clubs" value="sports"> Sports Council</label></p>
-    <p><label><input type="checkbox" name="clubs" value="arts"> Arts & Media Collective</label></p>
-    <p><label><input type="checkbox" name="housing" value="hostel"> Apply for campus housing</label></p>
-    <p><label><input type="checkbox" name="newsletter" value="yes"> Subscribe to student newsletter</label></p>
+    <p><strong>Qualification</strong></p>
+    <p><label><input type="checkbox" name="clubs" value="Web Technology"> CCC</label></p>
+    <p><label><input type="checkbox" name="clubs" value="DCA"> 12 pass</label></p>
+    <p><label><input type="checkbox" name="clubs" value="MCA"> 10 pass</label></p>
 
-    <p>
-      <label><input id="terms" name="terms" type="checkbox" required> I agree to the Student Honor Code and privacy policy.</label>
-    </p>
+    <p><strong>Enrollment Options (choose any)</strong></p>
+    <p><label><input type="radio" name="clubs" value="Web Technology"> BCA</label></p>
+    <p><label><input type="radio" name="clubs" value="DCA"> DCA</label></p>
+    <p><label><input type="radio" name="clubs" value="MCA"> MCA</label></p>
 
     <p>
       <button type="submit">Create Account</button>
